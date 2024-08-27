@@ -1,0 +1,329 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: system-ui;
+  background-image: linear-gradient(45deg, rgb(203, 255, 247) 0%, transparent 73%), repeating-linear-gradient(90deg, rgba(22, 20, 20, 0.29) 0px, rgba(22, 20, 20, 0.29) 1px, transparent 1px, transparent 17px), repeating-linear-gradient(0deg, rgba(22, 20, 20, 0.29) 0px, rgba(22, 20, 20, 0.29) 1px, transparent 1px, transparent 17px), linear-gradient(0deg, rgb(203, 255, 247), rgb(203, 255, 247));
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 800px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px white;
+}
+
+h1 {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .kayitBtn {
+    all: unset;
+    background: lightblue;
+    padding: 5px;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+}
+
+.studentTable {
+  border-bottom: 2px double lightblue;
+  border-width: 3px;
+}
+
+.studentTable>* {
+  display: grid;
+  grid-template-columns: 15% 15% 30% 20% 20%;
+}
+
+.studentTableTitles {
+  font-weight: bold;
+  border-bottom: 4px solid lightblue;
+
+  li {
+    padding: 10px;
+    text-align: center;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
+.studentTableCol {
+  padding: 5px 10px;
+  text-align: center;
+  &:last-child {
+    display: flex;
+    gap: 6px;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .designbtn {
+    all: unset;
+    background: rgb(245, 210, 147);
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 8px;
+    text-transform: uppercase;
+  }
+
+
+  .delBtn {
+    all: unset;
+    background: rgb(241, 94, 94);
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 8px;
+    text-transform: uppercase;
+  }
+
+  .saveBtn {
+    all: unset;
+    background: rgb(200, 253, 120);
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 8px;
+    text-transform: uppercase;
+  }
+
+  .cancelbtn {
+    all: unset;
+    background: rgb(241, 94, 94);
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 5px 8px;
+    text-transform: uppercase;
+  }
+
+  input {
+    width: 100%;
+    font-size: 12px;
+    padding: 4px;
+  }
+}
+
+.studentTable form:nth-child(odd) {
+  background-color: lightblue; 
+}
+
+.delBtn {
+  color: red;
+}
+
+.saveBtn {
+  color: green;
+}
+
+
+.kayitBtn {
+  all: unset;
+  background: lightblue;
+  padding: 5px;
+  border-radius: 10px;
+  color: black;
+  cursor: pointer;
+}
+
+.kayitBtn:hover {
+  box-shadow: 0 0 10px black;
+}
+
+.datas h3 {
+  width: 100%;
+  text-align: center;
+}
+
+.kayitModal {
+  margin: 100px auto;
+  border: none;
+  border-radius: 20px;
+  padding: 20px;
+  border: 2px solid lightblue;
+  box-shadow: 0 0 10px lightblue;
+}
+
+.modalheader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modalheader h1 {
+  color: black;
+}
+
+.closebtn {
+  all: unset;
+  background: lightblue;
+  padding: 5px 10px;
+  border-radius: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+.kayitForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-inline: 10px;
+}
+
+input:disabled {
+  all: unset;
+  font-size: 22px;
+  text-align: center;
+}
+
+
+.kayitForm input {
+  text-align: center;
+  border: 2px double lightblue;
+  border-width: 5px;
+  border-radius: 10px;
+}
+
+.kayitForm input:focus {
+  outline: none;
+}
+
+.kayitForm button {
+  all: unset;
+  text-align: center;
+  background: lightblue;
+  padding: 5px 10px;
+  border-radius: 30px;
+  color: black;
+  cursor: pointer;
+}
+
+.studentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.studentform {
+  display: grid;
+  grid-template-columns: 15% 15% 15% 20% 20% 15%;
+  align-items: center;
+  border-bottom: 2px solid lightblue;
+  padding-bottom: 5px;
+}
+
+.inputItem {
+  border: none;
+  text-align: center;
+}
+
+.inputItem input {
+  width: 80%;
+  text-align: center;
+  border: 2px double lightblue;
+  border-width: 5px;
+  border-radius: 10px;
+}
+
+.inputItem input:focus {
+  outline: none;
+}
+
+
+.studentTableCol {
+  text-align: center;
+
+}
+
+
+@media (width <=768px) {
+  .container {
+    width: 100%;
+  }
+
+  .container h1 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .studentTable,
+  .studentTableTitles {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
