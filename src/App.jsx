@@ -4,26 +4,27 @@ import './App.css'
 function App() {
   const [studentList, setStudentList] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [id, setId] = useState(0);
+  const [id, setId] = useState(0); 
 
-
-  function handleForm(e) {
+  
+  function handleForm(e) {  //formun gönderilmesini engeller
     e.preventDefault();
-    let formData = new FormData(e.target);
-    let formObj = Object.fromEntries(formData.entries());
-    let generateId = () => {
-      setId(id + 1);
-      return id;
+
+    let formData = new FormData(e.target); //e.target dediğimiz tıklanan formu yakalar onu formdata değişkenine atar
+    let formObj = Object.fromEntries(formData.entries()); //formdan gelen verileri formobj değişkenine atar
+    let generateId = () => {  //generateId isimli bir fonksiyon oluşturur
+      setId(id + 1);  //her seferinde id değişkenini 1 artmasını sağlar.
+      return id;  //id değerini dönmesini sağlar
     }
 
-    if (!(formObj.id)) {
-      formObj.id = generateId();
+    if (!(formObj.id)) {  //eğer formobj içinde id yoksa
+      formObj.id = generateId();  //id yi oluştur ve generateId fonksiyonunu ata
     }
 
-    e.target.reset();
-    setStudentList([...studentList, formObj]);
-  }
+    e.target.reset(); //tıklanan formu resetle yani inputa girilen verileri temizle
+    setStudentList([...studentList, formObj]);  //studentListin içinde ki verileri koruyup yenisini yanına eklenmesini sağlar.
 
+  } 
 
   function updateRecord(record) {
     let foundRecord = studentList.find(x => x.id === record.id);
@@ -57,8 +58,7 @@ function App() {
 
 function BilgiGiris({ isOpen, setIsOpen, handleForm }) {
   return (
-    <div className="kayitContainer">
-
+    <div className="kayitContainer"> 
       <dialog className='kayitModal' open={isOpen}>
         <div className="modalheader">
           <h1>Kayıt Ekle</h1>
@@ -91,7 +91,7 @@ function StudentRow({ id, ad, soyad, ePosta, dogumTarihi, updateRecord, deleteRe
   }
 
   return (
-    <form className="studentTable"  onSubmit={handleSubmit} onDoubleClick={() => setEditing(true)}>
+    <form className="studentTableform"  onSubmit={handleSubmit} onDoubleClick={() => setEditing(true)}>
       {isEditing ? (
         <>
           <div className="studentTableCol">

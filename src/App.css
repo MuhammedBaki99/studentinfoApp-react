@@ -88,7 +88,7 @@ h1 {
   border-width: 3px;
 }
 
-.studentTable>* {
+.studentTable > * {
   display: grid;
   grid-template-columns: 15% 15% 30% 20% 20%;
 }
@@ -170,8 +170,7 @@ h1 {
     text-transform: uppercase;
   }
 
-  input {
-    width: 100%;
+  input { 
     font-size: 12px;
     padding: 4px;
   }
@@ -320,7 +319,7 @@ input:disabled {
     flex-wrap: wrap;
   }
 
-  .studentTable,
+  .studentTable,.studentTableform,
   .studentTableTitles {
     width: 100%;
     display: flex;
