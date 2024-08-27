@@ -66,8 +66,7 @@ function BilgiGiris({ isOpen, setIsOpen, handleForm }) {
         </div>
         <form className='kayitForm' onSubmit={handleForm}>
           <input required type="text" name='ad' placeholder='Adınızı Giriniz' />
-          <input required type="text" name='soyad' placeholder='Soyadınızı Giriniz' />
-          <input required type="number" name='yas' placeholder='Yaşınızı Giriniz' />
+          <input required type="text" name='soyad' placeholder='Soyadınızı Giriniz' /> 
           <input required type="date" name='dogumTarihi' />
           <input required type='email' name='ePosta' placeholder='E-postanızı Giriniz' />
           <button type="submit">Kayıt Ekle</button>
